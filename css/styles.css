@@ -1,0 +1,118 @@
+body {
+    font-family: Helvetica;
+    background-image: url('https://dbdzm869oupei.cloudfront.net/img/sticker/preview/2563.png');
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    background: rgb(82, 82, 82);
+    width: 85%;
+    max-width: 350px;
+    margin: auto 13%;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a :hover {
+    background: chocolate;
+}
+
+.menulog {
+    background: rgb(57, 57, 57);
+    color: white;
+    width: 100%;
+    height: 166px;
+    
+}
+
+.parrafos {
+    background: rgb(90, 90, 90);
+    color: white;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.carousel , .carousel-inner , .carousel-item > .item > .img {
+    height: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+  
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #324c83;
+    color: white;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+  
+div.gallery:hover {
+    border: 1px solid #777;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+  
+* {
+    box-sizing: border-box;
+}
+  
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
