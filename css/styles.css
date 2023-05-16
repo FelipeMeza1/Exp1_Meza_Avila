@@ -196,3 +196,17 @@ label {
     margin: auto;
 >>>>>>> fe236a5 (Adicion de dos nuevas paginas: un formulario de contacto y una manera de localizar el taller (esta solo menciona la direccion y no muestra ningun mapa) junto con correciones como un menu responsivo y ajustes a la galeria)
 }
+
+#mapa{
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+}
+
+#frameMapa{
+    border-radius: 5px;
+    margin: 15px;
+}
