@@ -5,6 +5,14 @@
 {% block contenido %}
 
   <p>A continuación se presenta nuestro listado de productos</p>
+
+  {% for servicios in servicio %}
+  <br>
+  
+  {{servicios.foto}} <br> {{servicios.descripcion}}
+
+  {% endfor%}
+
    <div class="responsive">
         <div class="gallery">
           <a target="_blank" href="img/1970_Dodge_Challenger_RT.jpg">
