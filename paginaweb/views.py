@@ -11,11 +11,8 @@ def mision(request):
 def localizacion(request):
     return render(request, 'paginaweb/localizacion.html')
 
-def base(request):
-    return render(request, 'paginaweb/base.html')
-
-def fromulario(request):
-    return render(request, 'paginaweb/fromulario.html')
+def formulario(request):
+    return render(request, 'paginaweb/formulario.html')
 
 def galeria(request):
     return render(request, 'paginaweb/galeria.html')
