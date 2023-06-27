@@ -4,3 +4,7 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'paginaweb/index.html')
+
+def mision(request):
+    return render(request, 'paginaweb/mision.html')
+
