@@ -8,3 +8,14 @@ def index(request):
 def mision(request):
     return render(request, 'paginaweb/mision.html')
 
+def localizacion(request):
+    return render(request, 'paginaweb/localizacion.html')
+
+def base(request):
+    return render(request, 'paginaweb/base.html')
+
+def fromulario(request):
+    return render(request, 'paginaweb/fromulario.html')
+
+def galeria(request):
+    return render(request, 'paginaweb/galeria.html')
