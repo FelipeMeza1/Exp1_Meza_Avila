@@ -115,8 +115,6 @@ div.desc {
     padding: 0 6px;
     float: left;
     width: 24.99999%;
-<<<<<<< HEAD
-=======
 }
 
 .topnav {
@@ -194,7 +192,6 @@ label {
     width: 80%;
     height: auto;
     margin: auto;
->>>>>>> fe236a5 (Adicion de dos nuevas paginas: un formulario de contacto y una manera de localizar el taller (esta solo menciona la direccion y no muestra ningun mapa) junto con correciones como un menu responsivo y ajustes a la galeria)
 }
 
 #mapa{
@@ -209,4 +206,9 @@ label {
 #frameMapa{
     border-radius: 5px;
     margin: 15px;
+}
+
+.productos{
+    color: white;
+    background-color: #777;
 }

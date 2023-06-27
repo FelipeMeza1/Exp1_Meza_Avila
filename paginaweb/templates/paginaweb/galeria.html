@@ -4,16 +4,24 @@
 
 {% block contenido %}
 
-  <p>A continuación se presenta nuestro listado de productos</p>
+    <p>A continuación se presenta nuestro listado de productos</p>
 
-  {% for servicios in servicio %}
-  <br>
-  
-  {{servicios.foto}} <br> {{servicios.descripcion}}
+    <div class="productos">
 
-  {% endfor%}
+      {% for productos in producto %}
+      <br>
+    
+      {{productos.foto}} <br> {{productos.nombre}} <br> {{productos.precio}} <br> {{productos.descripcion}}
 
-   <div class="responsive">
+      {% endfor%}
+    
+    </div>
+
+    <p>Tambien puede observar esta galeria que presenta algunos de los vehiculos de nuestros clientes pasados:</p>
+
+    <br>
+
+    <div class="responsive">
         <div class="gallery">
           <a target="_blank" href="img/1970_Dodge_Challenger_RT.jpg">
             <img src="img/1970_Dodge_Challenger_RT.jpg" alt="Dodge Challenger" width="600" height="400">
