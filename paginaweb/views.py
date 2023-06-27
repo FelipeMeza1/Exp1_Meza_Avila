@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout
+from .models import Productos
 
 # Create your views here.
 
@@ -15,4 +17,10 @@ def formulario(request):
     return render(request, 'paginaweb/formulario.html')
 
 def galeria(request):
-    return render(request, 'paginaweb/galeria.html')
+    producto= Productos.objects.all()
+    context={"producto":producto}
+    return render(request, 'paginaweb/galeria.html', context)
+
+def exit(request):
+    logout(request)
+    return redirect('index')

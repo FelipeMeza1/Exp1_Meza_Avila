@@ -1,0 +1,20 @@
+{% extends 'paginaweb/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<h1>Inicio de Sesión (Solo Administradores)</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    <input type="text" name="username" id="" placeholder="Nombre de Usuario">
+    <br>
+    <input type="password" name="password" id="" placeholder="Contraseña">
+    <br>
+    <button type="submit">Iniciar Sesion</button>
+
+</form>
+
+{% endblock %}
