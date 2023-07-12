@@ -1,0 +1,23 @@
+{% extends 'paginaweb/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="container1">
+    <h1>Agregar Alumno</h1>
+    <form action="{% url 'agregarrec' %}" method="post">
+        {% csrf_token %}
+        <label for="">Foto</label><br><br>
+        <input type="file" name="foto" accept="image/png, image/gif, image/jpeg"><br><br>
+        <label for="">Nombre</label><br><br>
+        <input type="text" name="nombre"><br><br>
+        <label for="">Precio</label><br><br>
+        <input type="number" name="precio"><br><br>
+        <label for="">Descripción</label><br><br>
+        <input type="text" name="descripcion"><br><br>
+        <button type="submit" id="new">Agregar</button>
+    </form>
+</div>
+
+{% endblock %}

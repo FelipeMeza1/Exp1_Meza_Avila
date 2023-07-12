@@ -8,4 +8,6 @@ urlpatterns = [
     path('localizacion/', views.localizacion, name='localizacion'),
     path('mision/', views.mision, name='mision'),
     path('logout/', exit, name='exit'),
+    path('agregar/', views.agregar, name='agregar'),
+    path('agregarrec/', views.agregarrec, name='agregarrec'),
 ]

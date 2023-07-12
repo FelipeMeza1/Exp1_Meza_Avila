@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 from .models import Productos
 
 # Create your views here.
@@ -21,6 +22,19 @@ def galeria(request):
     context={"producto":producto}
     return render(request, 'paginaweb/galeria.html', context)
 
+@login_required
 def exit(request):
     logout(request)
     return redirect('index')
+
+def agregar(request):
+    return render(request, 'paginaweb/agregar.html')
+
+def agregarrec(request):
+    x=request.POST['foto']
+    y=request.POST['nombre']
+    z=request.POST['precio']
+    b=request.POST['descripcion']
+    prod=Productos(foto=x, nombre=y, precio=z, descripcion=b)
+    prod.save()
+    return redirect("/")
