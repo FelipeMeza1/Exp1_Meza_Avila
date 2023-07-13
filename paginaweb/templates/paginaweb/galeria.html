@@ -4,16 +4,18 @@
 
 {% block contenido %}
 
-    <p>A continuación se presenta nuestro listado de productos</p>
+  
 
     <div class="productos">
+
+      <p>A continuación se presenta nuestro listado de productos</p>
 
       {% for productos in producto %}
       <br>
     
 
       <div class="responsive">
-        <div class="gallery">
+        <div class="miproducto">
           <a target="_blank" href="{% static 'img/1970_Dodge_Challenger_RT.jpg' %}">
             <img src="{{productos.foto}}" alt="Imagen de Producto" width="600" height="400">
           </a>
