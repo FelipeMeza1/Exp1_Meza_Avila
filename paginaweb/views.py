@@ -45,7 +45,7 @@ def agregar_carrito(request):
     else:
         
         try:
-            cart = Cart.objects.get(session_id = request.session['nonuser'], completed=False)
+            carrito = Carrito.objects.get(session_id = request.session['nonuser'], completed=False)
             itemscarrito, created =ItemCarrito.objects.get_or_create(carrito=carrito, producto=producto)
             itemscarrito.cantidad += 1
             itemscarrito.save()
@@ -54,7 +54,7 @@ def agregar_carrito(request):
         
         except:
             request.session['nonuser'] = str(uuid.uuid4())
-            cart = Cart.objects.create(session_id = request.session['nonuser'], completed=False)
+            carrito = Carrito.objects.create(session_id = request.session['nonuser'], completed=False)
             itemscarrito, created = ItemCarrito.objects.get_or_create(carrito=carrito, producto=producto)
             itemscarrito.cantidad += 1
             itemscarrito.save()
