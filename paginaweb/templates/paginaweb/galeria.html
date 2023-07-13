@@ -21,14 +21,14 @@
           <tr>
             {% if request.user.is_authenticated %}
             <td>
-              <a href="#"><button id="up">Actualizar</button></a>
+              <a href="actualizar/{{productos.id}}"><button id="up">Actualizar</button></a>
             </td>
             <td>
-              <a href="#"><button id="del">Eliminar</button></a>
+              <a href="eliminar/{{productos.id}}"><button id="del">Eliminar</button></a>
             </td>
             {% else %}
             <td class="botoncarr">
-              <a href="#"><button id="car">Agregar al carrito</button></a>
+              <button id="car">Agregar al carrito</button>
             </td>
             {% endif %}
           </tr>
@@ -39,9 +39,10 @@
     
     </div>
 
-    <br> <br> <br> <br> <br> <br> <br>
+    <br><br><br><br><br><br><br>
 
-    <p>Tambien puede observar esta galeria que presenta algunos de los vehiculos de nuestros clientes pasados:</p>
+    <p>Tambien puede observar esta galeria que presenta algunos de los vehiculos de nuestros clientes pasados
+      (Estas imágenes fueron tomadas con su consentimiento):</p>
 
     <br>
 

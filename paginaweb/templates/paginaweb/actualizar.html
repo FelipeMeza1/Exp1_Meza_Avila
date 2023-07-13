@@ -1,0 +1,27 @@
+{% extends 'paginaweb/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="actualizar">
+    <h1>Actualizar Alumno</h1>
+    <form action="{% url 'actualizarrec' alu.id %}" method="post">
+        {% csrf_token %}
+        <label for="">Id</label><br><br>
+        <input type="number" name="id" required><br><br>
+        <label for="">Foto</label><br><br>
+        <input type="file" name="foto" value="{{prod.foto}}" accept="image/png, image/gif, image/jpeg"><br><br>
+        <label for="">Nombre</label><br><br>
+        <input type="text" name="nombre" value="{{prod.nombre}}"><br><br>
+        <label for="">Precio</label><br><br>
+        <input type="number" name="precio" value="{{prod.precio}}"><br><br>
+        <label for="">Descripción</label><br><br>
+        <input type="text" name="descripcion" value="{{prod.descripcion}}"><br><br>
+        <button type="submit" id="new1">Actualizar</button>
+    </form>
+</div>
+
+
+
+{% endblock %}

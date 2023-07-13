@@ -4,18 +4,20 @@
 
 {% block contenido %}
 
-<div class="container1">
-    <h1>Agregar Alumno</h1>
+<div class="agregar">
+    <h1>Agregar Producto</h1>
     <form action="{% url 'agregarrec' %}" method="post">
         {% csrf_token %}
+        <label for="">Id</label><br><br>
+        <input type="number" name="id" required><br><br>
         <label for="">Foto</label><br><br>
-        <input type="file" name="foto" accept="image/png, image/gif, image/jpeg"><br><br>
+        <input type="file" name="foto" accept="image/png, image/gif, image/jpeg" required><br><br>
         <label for="">Nombre</label><br><br>
-        <input type="text" name="nombre"><br><br>
+        <input type="text" name="nombre" required><br><br>
         <label for="">Precio</label><br><br>
-        <input type="number" name="precio"><br><br>
+        <input type="number" name="precio" required><br><br>
         <label for="">Descripción</label><br><br>
-        <input type="text" name="descripcion"><br><br>
+        <input type="text" name="descripcion" required><br><br>
         <button type="submit" id="new">Agregar</button>
     </form>
 </div>

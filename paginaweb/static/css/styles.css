@@ -215,4 +215,15 @@ label {
 
 .botoncarr{
     text-align: center;
+    margin: 0;
+}
+
+.agregar{
+    color: white;
+    margin: 80px 240px 60px 240px;
+    padding: 0px 100px 100px 100px;
+}
+
+.agregar input {
+    padding: 8px;
 }

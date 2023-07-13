@@ -31,10 +31,35 @@ def agregar(request):
     return render(request, 'paginaweb/agregar.html')
 
 def agregarrec(request):
+    a=request.POST['id']
     x=request.POST['foto']
     y=request.POST['nombre']
     z=request.POST['precio']
     b=request.POST['descripcion']
-    prod=Productos(foto=x, nombre=y, precio=z, descripcion=b)
+    prod=Productos(id=a, foto=x, nombre=y, precio=z, descripcion=b)
     prod.save()
+    return redirect("/")
+
+def actualizar(request, id):
+    prod=Productos.objects.get(id=id)
+    return render(request, 'paginaweb/actualizar.html',{'prod':prod})
+
+def actualizarrec(request, id):
+    a=request.POST['id']
+    x=request.POST['foto']
+    y=request.POST['nombre']
+    z=request.POST['precio']
+    b=request.POST['descripcion']
+    prod=Productos.objects.get(id=id)
+    prod.id=a
+    prod.foto=x
+    prod.nombre=y
+    prod.precio=z
+    prod.descripcion=b
+    prod.save()
+    return redirect("/")
+
+def eliminar(request, id):
+    prod=Productos.objects.get(id=id)
+    prod.delete()
     return redirect("/")
