@@ -1,0 +1,43 @@
+{% extends 'paginaweb/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="shoppingCart">
+    <h2>Carrito</h2>
+  
+    <div class="heading">
+      <div class="p_name"><h4>Nombre</h4></div>
+      <div class="name"><h4>Cantidad</h4></div>
+      <div class="name"><h4>Precio de Unidad</h4></div>
+      <div class="name"><h4>Precio</h4></div>
+    </div>
+  
+    <div class="itemContainer">
+  
+      {% for item in carrito.itemscarrito.all %}
+      <div class="item">
+        <div class="iteminfo">
+          <div class="p_img">
+            <img src="{{item.producto.foto.url}}" alt="" />
+          </div>
+          <p>{{item.producto.nombre}}</p>
+        </div>
+  
+        <div class="name"><p>{{item.cantidad}}</p></div>
+        <div class="name"><p>${{item.producto.precio}}</p></div>
+        <div class="name"><p>${{item.precio}}</p></div>
+      </div>
+  
+      {% endfor %}
+    </div>
+  
+    <div class="pay-section">
+      <h3>Total: ${{carrito.total}}</h3>
+      <button>Pagar</button>
+    </div>
+  </div>
+  
+
+{% endblock %}
